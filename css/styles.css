@@ -42,7 +42,6 @@ img {
 }
 
 .section {
-  background-color: white;
   width: 100%;
   height: 100vh;
 }
@@ -54,16 +53,15 @@ img {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: aqua;
 }
 
 .section__items {
   width: 100%;
-  height: 200px;
   margin: 0 auto;
   padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
   position: relative;
-  background-color: #fff;
 }
 
 /* +left-side+ */
@@ -72,7 +70,7 @@ img {
 .logoFiles,
 .levels {
   width: 100%;
-  height: 100%;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -127,6 +125,7 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 .levels__text {
   width: 80%;
@@ -171,14 +170,14 @@ img {
   color: var(--paleblue);
 }
 .space {
-  width: 40%;
+  width: 150px;
   height: 70px;
   margin: 0 auto;
   padding: 10px;
   text-align: center;
   position: absolute;
   left: 30%;
-  bottom: -20px;
+  bottom: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,28 +206,40 @@ img {
   .section__container {
     flex-direction: row;
   }
+  .section__items {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
 
   .levels {
-    margin-top: 10px;
+    margin-top: 30px;
+    align-self: center;
   }
 
   .levels__gauge--indicator::after {
     left: 93%;
   }
   .space {
-    top: 0;
-    left: 40%;
+    top: 40%;
+    left: 63%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 80%, 0 80%);
+    stroke-linejoin: round;
   }
 }
 
 @media (min-width: 900px) {
   .logoFiles {
     width: 400px;
+    margin-left: 50px;
   }
   .levels {
     width: 500px;
   }
   .levels__gauge--indicator::after {
     left: 93%;
+  }
+  .space {
+    left: 70%;
   }
 }
