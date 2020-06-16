@@ -208,11 +208,12 @@ img {
   }
   .section__items {
     flex-direction: row;
-    gap: 10px;
+    justify-content: space-around;
   }
 
   .levels {
     margin-top: 30px;
+    margin-right: 10px;
     align-self: center;
   }
 
@@ -229,6 +230,9 @@ img {
 }
 
 @media (min-width: 900px) {
+  .section__items {
+    width: 80%;
+  }
   .logoFiles {
     width: 400px;
     order: 2;
