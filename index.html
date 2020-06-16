@@ -2,9 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <title>FYLO PROJECT</title>
   </head>
   <body>
@@ -13,17 +12,25 @@
         <div class="section__container">
           <!-- left side -->
           <div class="section__items">
-            <div class="logosFiles">
+            <div class="logoFiles">
               <div class="logoFiles__container">
                 <div class="logo">
-                  <div class="logoWrapper"><img src="" alt="" /></div>
+                  <div class="logo__wrapper">
+                    <img src="img/logo.svg" alt="" />
+                  </div>
                 </div>
 
                 <div class="files">
                   <div class="files__wrapper">
-                    <div class="files__item"><img src="" alt="" /></div>
-                    <div class="files__item"><img src="" alt="" /></div>
-                    <div class="files__item"><img src="" alt="" /></div>
+                    <div class="files__item">
+                      <img src="img/icon-document.svg" alt="" />
+                    </div>
+                    <div class="files__item">
+                      <img src="img/icon-folder.svg" alt="" />
+                    </div>
+                    <div class="files__item">
+                      <img src="img/icon-upload.svg" alt="" />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -38,21 +45,21 @@
               </div>
 
               <div class="levels__gauge">
-                <div class="indicator">
+                <div class="levels__gauge--indicator">
                   <!-- using the pseudo class:after for the dot marker  -->
                 </div>
 
-                <div class="numbers">
+                <div class="levels__gauge--numbers">
                   <span>0GB</span>
                   <span> 1000GB</span>
                 </div>
               </div>
+            </div>
 
-              <div class="levels__space">
-                <div class="space__text">
-                  <span>185</span>
-                  <span>GB LEFT</span>
-                </div>
+            <div class="space">
+              <div class="space__text">
+                <span class="space__text--bold">185</span>
+                <span class="space__text--light">GB LEFT</span>
               </div>
             </div>
           </div>
