@@ -25,7 +25,7 @@ body {
     background-image: url(../img/bg-mobile.svg);
   }
 }
-p {
+h2 {
   font-size: 14px;
   color: var(--paleblue);
 }
@@ -246,6 +246,6 @@ img {
     left: 93%;
   }
   .space {
-    left: 70%;
+    left: 75%;
   }
 }
