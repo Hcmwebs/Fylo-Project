@@ -18,13 +18,21 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 14px;
   font-weight: 400;
-  background: url(../img/bg-desktop.svg) no-repeat center center/cover;
+  background-position: left bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg-desktop.svg);
+  background-color: var(--verydarkblue);
 }
 @media (max-width: 375px) {
   body {
     background-image: url(../img/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
+
 h2 {
   font-size: 14px;
   color: var(--paleblue);
