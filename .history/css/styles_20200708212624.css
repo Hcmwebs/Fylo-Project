@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --paleblue: hsl(243, 100%, 93%);
+  --grayishblue: hsl(229, 7%, 55%);
+  --darkblue: hsl(228, 56%, 26%);
+  --verydarkblue: hsl(229, 57%, 11%);
+  --gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  background-position: left bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/bg-desktop.svg);
+  background-color: var(--verydarkblue);
+}
+@media (max-width: 375px) {
+  body {
+    background-image: url(../img/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+h2 {
+  font-size: 14px;
+  color: var(--paleblue);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+}
+.section__container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.section__items {
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* +left-side+ */
+/* ++logo++ */
+
+.logoFiles,
+.levels {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 10px 100px 10px 10px;
+  background-color: var(--darkblue);
+}
+.logoFiles__container {
+  width: 80%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.logo {
+  width: 100%;
+}
+
+.logo__wrapper {
+  width: 80%;
+  height: 50%;
+}
+
+/* ++files++ */
+.files {
+  width: 100%;
+  height: 50px;
+}
+.files__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.files__item {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: var(--verydarkblue);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/*+right-side+*/
+/* ++levels++ */
+
+.levels {
+  height: 170px;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+.levels__text {
+  width: 80%;
+  padding: 10px 0;
+}
+.levels__gauge {
+  width: 80%;
+  height: 20px;
+  border-radius: 20px;
+  background-color: var(--verydarkblue);
+}
+.levels__gauge--indicator {
+  content: "";
+  width: 80%;
+  height: 20px;
+  display: block;
+  border-radius: 20px;
+  background: linear-gradient(
+    90deg,
+    hsl(6, 100%, 80%) 0%,
+    hsl(335, 100%, 65%) 100%
+  );
+  position: relative;
+}
+.levels__gauge--indicator::after {
+  content: "";
+  width: 19px;
+  height: 19px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 90%;
+  background-color: var(--paleblue);
+}
+.levels__gauge--numbers {
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.levels__gauge--numbers span {
+  color: var(--paleblue);
+}
+.space {
+  width: 150px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  top: -5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.space__text {
+  width: 100%;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.space__text--bold {
+  font-size: 28px;
+  color: var(--verydarkblue);
+}
+
+.space__text--light {
+  font-size: 10px;
+  margin-left: 10px;
+  color: var(--grayishblue);
+}
+@media (min-width: 700px) {
+  .section__container {
+    flex-direction: row;
+  }
+  .section__items {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .levels {
+    margin-top: 30px;
+    margin-right: 10px;
+    align-self: center;
+  }
+
+  .levels__gauge--indicator::after {
+    left: 93%;
+  }
+  .space {
+    align-self: flex-start;
+    order: 1;
+    right: 20%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 80%, 0 80%);
+    stroke-linejoin: round;
+  }
+}
+
+@media (min-width: 900px) {
+  .section__items {
+    width: 80%;
+  }
+  .logoFiles {
+    width: 400px;
+    order: 2;
+  }
+  .levels {
+    width: 500px;
+    margin-left: 10px;
+    order: 3;
+  }
+  .levels__gauge--indicator::after {
+    left: 93%;
+  }
+  .space {
+    left: 75%;
+  }
+}
